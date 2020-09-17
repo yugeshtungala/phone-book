@@ -1,0 +1,48 @@
+<h2>Add new Contact Details</h2>
+<hr/>
+<form #f1="ngForm">
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" name='firstname' [(ngModel)]="contact.firstname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>LastName</label>
+        <input type="text" name='lastname' [(ngModel)]="contact.lastname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Gender :- </label>
+        <label><input type="radio" name='gender' [(ngModel)]="contact.gender" value="Male" > Male </label>
+        <label><input type="radio"  name='gender' [(ngModel)]="contact.gender" value="Female" > Female </label>
+    </div>
+    <div class="form-group">
+        <label>Email Id</label>
+        <input type="email" name='emal' [(ngModel)]="contact.email" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label>Phone No</label>
+        <input type="number" name='phone' [(ngModel)]="contact.phone" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>DOB</label>
+        <input type="dob" name='dob' [(ngModel)]="contact.dob" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>City</label>
+        <input type="text" name='city' [(ngModel)]="contact.city" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>State</label>
+        <input type="text" name='state' [(ngModel)]="contact.state" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Country</label>
+        <input type="text" name='country' [(ngModel)]="contact.country" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Picture (URL)</label>
+        <input type="text" name='picture' [(ngModel)]="contact.picture" class="form-control">
+    </div>
+
+    <button class="btn btn-{{f1.invalid ? 'danger' :'info'}}" [disabled]="f1.invalid" (click)=" addContact()">Add Contact</button>
+</form>

@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/sweetalert/dist/sweetalert.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "p-skll"
+    }
+  },
+  "defaultProject": "p-skll",
+  "cli": {
+    "analytics": "ed4405d0-d060-4d72-92e8-22a165d830c1"
+  }
 }

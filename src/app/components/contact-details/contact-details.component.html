@@ -1,0 +1,41 @@
+<h2>Contact Details</h2>
+
+<hr/>
+<img  src="{{contact.picture}}"  style="height: 250px">
+<div class="row">
+    <div class="col-sm-4">Name:-</div>
+    <div class="col-sm-8">{{contact | fullname}}</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">Email</div>
+    <div class="col-sm-8">{{contact.email}}</div>
+</div>
+<div class="row">
+    <div class="col-sm-4">phone</div>
+    <div class="col-sm-8">{{contact.phone}}</div>
+</div>
+<div class="row">
+    <div class="col-sm-4">dob</div>
+    <div class="col-sm-8">{{contact.dob}}</div>
+</div>
+<div class="row">
+    <div class="col-sm-4">Gender</div>
+    <div class="col-sm-8">{{contact.gender}}</div>
+</div>
+<div class="row">
+    <div class="col-sm-4">City</div>
+    <div class="col-sm-8">{{contact.city}}</div>
+</div>
+<div class="row">
+    <div class="col-sm-4">State</div>
+    <div class="col-sm-8">{{contact.state}}</div>
+</div>
+<div class="row">
+    <div class="col-sm-4">country</div>
+    <div class="col-sm-8">{{contact.country}}</div>
+</div>
+
+
+<button (click)="deleteContact()" class="btn btn-danger mr-2">Delete</button>
+<button [routerLink]="['/update-contact',contact.id]" routerLinkActive="router-link-active"  class="btn btn-info ">Update</button>
